@@ -49,7 +49,7 @@ class MessagesCatcher(tornado.websocket.WebSocketHandler):
             self.write_message(str(msg.body))
 
     def close(self):
-        print 'closed'
+        print('closed')
         self.client.unsubscribe('test_channel')
         self.client.disconnect()
 

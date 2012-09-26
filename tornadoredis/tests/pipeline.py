@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from tornado import gen
 
-from redistest import RedisTestCase, async_test
+from .redistest import RedisTestCase, async_test
 from tornadoredis.exceptions import ResponseError
 
 

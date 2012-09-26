@@ -18,7 +18,7 @@ class DisconnectingRedisServer(TCPServer):
             command = yield gen.Task(stream.read_until, '\r\n')
             arg_num = int(n_args.strip()[1:]) - 1
             if arg_num > 0:
-                for __ in xrange(0, arg_num):
+                for __ in range(0, arg_num):
                     # read the $N line
                     yield gen.Task(stream.read_until, '\r\n')
                     # read the argument line
